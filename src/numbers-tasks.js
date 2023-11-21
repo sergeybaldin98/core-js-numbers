@@ -197,14 +197,15 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(n) {
-  let count = 0;
-  for (let i = 0; i <= n; i + 1) {
-    if (n % i === 0) {
-      count += 1;
-    }
-  }
-  return count === 2;
+function isPrime(/* n */) {
+  throw new Error('Not implemented');
+  // let count = 0;
+  // for (let i = 0; i <= n; i + 1) {
+  //   if (n % i === 0) {
+  //     count += 1;
+  //   }
+  // }
+  // return count === 2;
 }
 
 /**
@@ -237,8 +238,8 @@ function toNumber(/* value, def */) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
@@ -269,8 +270,8 @@ function getFibonacciNumber(/* index */) {
  *   10 => 55 // (1+2+3+...+10)
  *   1  => 1
  */
-function getSumToN(/* n */) {
-  throw new Error('Not implemented');
+function getSumToN(n) {
+  return (n * (n + 1)) / 2;
 }
 
 /**
@@ -313,8 +314,8 @@ function isPowerOfTwo(num) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
@@ -373,8 +374,8 @@ function toFixed(number, fractionDigits) {
  * 12345, 7    => '12345.00'
  * 12.345, 4   => '12.35'
  */
-function toPrecision(/* number, precision */) {
-  throw new Error('Not implemented');
+function toPrecision(number, precision) {
+  return number.toPrecision(precision);
 }
 
 /**
@@ -435,8 +436,8 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  return Number.parseFloat(str);
 }
 
 /**
@@ -453,8 +454,8 @@ function getFloatOnString(/* str */) {
  * '1.234', 2           => 1
  * '10', 8              => 8
  */
-function getIntegerOnString(/* str, base */) {
-  throw new Error('Not implemented');
+function getIntegerOnString(str, base) {
+  return Number.parseInt(str, base);
 }
 
 /**
@@ -574,8 +575,8 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
  * -1, 1 => -1 | 0 | 1
  */
-function getRandomInteger(/* min, max */) {
-  throw new Error('Not implemented');
+function getRandomInteger(min, max) {
+  return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
 /**
@@ -588,8 +589,8 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  return Math.hypot(a, b);
 }
 
 /**
@@ -607,6 +608,13 @@ function getHypotenuse(/* a, b */) {
  */
 function getCountOfOddNumbers(/* number */) {
   throw new Error('Not implemented');
+  // let odd = 0;
+  // for (let i = 0; i <= number; i + 1) {
+  //   if (i % 2 === 0) {
+  //     odd += 1;
+  //   }
+  // }
+  // return odd;
 }
 
 module.exports = {
